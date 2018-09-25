@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Weather">
+    <meta name="author" content="WoWnik, Distrame">
+    <link rel="icon" type="image/png" href="{{ static_url('images/favicon.png') }}">
+
+    <title>Weather</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"
+          integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+          crossorigin="anonymous">
+    <!-- Font Awesome CSS -->
+    <link href="{{ static_url('css/FontAwesome/css/font-awesome.css') }}" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Russo+One&amp;subset=cyrillic" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="{{ static_url('css/custom.css') }}" rel="stylesheet">
+
+</head>
+<body>
+<!--Head-->
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8 main_mid">
+            <div class="container-fluid" id="head"
+                 style="padding-bottom:10px; border-bottom: .05rem solid #e5e5e5;">
+                <nav class="nav nav-pills d-flex justify-content-between">
+
+                    <div class="navbar-header">
+                        <a href="/" class="navbar-brand" style="padding: 0 0 0 0;">
+                            <h3 class="text-muted" style="margin-top:5px; margin-bottom: 0;" id="time">
+
+                            </h3>
+                        </a>
+                    </div>
+
+                    <div>
+                        <ul class="nav nav-pills">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    По поводу
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    Войти <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </nav>
+            </div>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+    <!--Body-->
+    <div class="row justify-content-center">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8 main_mid">
+            <div class="container-fluid" id="body"
+                 style="padding-top: 10px; padding-bottom: 10px;">
+                <div class="jumbotron jum" style="background-image: url({{ static_url('images/MainRain.gif') }});">
+                    <h2 class="display-4"> Погода в вашем Мухосранске: </h2>
+                    <h3 class="display-4"> В целом ясно </h3>
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <p class="lead"> <small> Было ясно, пока ты не пришел </small> </p>
+                            <p>
+                                <a class="btn btn-lg btn-secondary" style="padding: .75rem 1.5rem; font-size: 1.5rem;"
+                                   href="/Weather/ChangeLog" role="button"> уйти </a>
+                            </p>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                </div>
+
+                <div class="row" style="margin: 48px 0 48px 0">
+                    <div class="col-lg-6">
+                        <h4>Заголовок</h4>
+                        <p>Тут должны быть перечислены фичи, но пока что и сайта то нет.</p>
+
+                        <h4>Заголовок</h4>
+                        <p>А зачем я это оставил?</p>
+
+                        <h4>Заголовок</h4>
+                        <p>Тут должны быть перечислены фичи, но пока что и сайта то нет.</p>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <h4>Заголовок</h4>
+                        <p>Тут должны быть перечислены фичи, но пока что и сайта то нет.</p>
+
+                        <h4>Заголовок</h4>
+                        <p>Тут должны быть перечислены фичи, но пока что и сайта то нет.</p>
+
+                        <h4>Заголовок</h4>
+                        <p>Тут должны быть перечислены фичи, но пока что и сайта то нет.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+    <!--Foot-->
+    <div class="row justify-content-center">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8 main_mid">
+            <div class="container-fluid" id="foot"
+                 style="padding-top: 10px; padding-bottom: 10px; color: #777; border-top: .05rem solid #e5e5e5;">
+                <footer class="footer">
+                    <p>{{ copyright }}</p>
+                </footer>
+            </div>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+</div>
+
+</body>
+
+<!-- Other JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
+        integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+
+<script src="{{ static_url('js/Time.js') }}"></script>
+<script src="{{ static_url('js/MainHandler.js') }}"></script>
+
+</html>

@@ -1,0 +1,41 @@
+html {
+    font-size: 15px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    background-color: #fff;
+    overflow-y: scroll;
+}
+
+.jum {
+    text-align: center;
+    border-bottom: .05rem solid #e5e5e5;
+
+    background-position: right center;
+    background-size: cover;
+
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.jum > h2 {
+    font-family: 'Russo One', sans-serif
+}
+
+.main_left {
+    max-width: 200px;
+}
+
+.main_mid {
+    max-width: 800px;
+}
+
+.main_right {
+    max-width: 200px;
+}
+
+.button_about {
+    margin: 5px 5px 5px 5px;
+}
