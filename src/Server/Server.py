@@ -24,7 +24,7 @@ class PyServer:
             (r"/Weather/JS/(.*)", Controllers.JSControllers.JS),
 
             # Static
-            (r"/static", tornado.web.StaticFileHandler, dict(path=settings['static_path']))
+            (r"/Weather/static", tornado.web.StaticFileHandler, dict(path=settings['static_path']))
         ], **settings, cookie_secret="VerySecretWeatherCookie")
 
     def __init__(self, ip: str, port: str, domain=None):
