@@ -14,7 +14,7 @@ class PyServer:
     def make_app():
         settings = {
             "static_path": os.path.dirname(__file__),
-            "static_url_prefix": "/Weather/"
+            "static_url_prefix": "/Weather/static/"
         }
         return tornado.web.Application([
             (r"/Weather", Controllers.Weather.MainHandler),
