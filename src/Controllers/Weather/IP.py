@@ -8,5 +8,5 @@ class IP(BaseHandler):
 
     def get(self):
         self.write({"ip": self.request.remote_ip,
-                    "request": self.request})
+                    "request": str(self.request)})
         return
