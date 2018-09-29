@@ -14,8 +14,8 @@ function httpPost(theUrl, data = null) {
     };
 }
 
-function onload() {
-    var res = httpPost("/Weather/WeatherJSONBy_user_ip");
+function onlod() {
+    var res = httpGet("/Weather/WeatherJSONBy_user_ip");
     var rej = JSON.parse(res).data;
 
     {
