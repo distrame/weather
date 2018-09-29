@@ -34,7 +34,7 @@ function onlod() {
             "class": "d-flex justify-content-center"
         }).appendTo("#weather_current");
         {
-            $("<img src=" + rej.current.condition.icon + "/>", {
+            $("<img src='http:" + rej.current.condition.icon + "'/>", {
                 "id": "weather_current-" + "icon"
             }).appendTo("#weather_current-body");
             $("<div/>", {
@@ -57,7 +57,7 @@ function onlod() {
             "class": "d-flex justify-content-center"
         }).appendTo("#weather_day_" + i + "");
         {
-            $("<img src=" + rej.forecast.forecastday[i].day.condition.icon + "/>", {
+            $("<img src='http:" + rej.forecast.forecastday[i].day.condition.icon + "'/>", {
                 "id": "weather_day_" + i + "-" + "icon"
             }).appendTo("#weather_day_" + i + "-body");
             $("<div/>", {
