@@ -1,13 +1,13 @@
-function httpGet(theUrl, data = null) {
+function httpGet(theUrl, data = null, sync = false) {
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("GET", theUrl, false); // false for synchronous request
+    xmlHttp.open("GET", theUrl, sync); // false for synchronous request
     xmlHttp.send(data);
     return xmlHttp.responseText;
 }
 
-function httpPost(theUrl, data = null) {
+function httpPost(theUrl, data = null, sync = false) {
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("POST", theUrl, true); // false for synchronous request
+    xmlHttp.open("POST", theUrl, sync); // false for synchronous request
     xmlHttp.send(data);
     xmlHttp.onload = function () {
         console.log(this.responseText);
@@ -16,7 +16,7 @@ function httpPost(theUrl, data = null) {
 
 function onlod() {
     var res = httpGet("/Weather/WeatherJSONBy_user_ip");
-    var rej = JSON.parse(res).data;
+    var rej = JSON.parse(res);
 
     {
         $("<div/>", {
