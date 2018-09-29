@@ -17,12 +17,15 @@ class PyServer:
             "static_url_prefix": "/Weather/static/"
         }
         return tornado.web.Application([
+            (r"/", Controllers.Weather.ToMain),
             (r"/Weather", Controllers.Weather.MainHandler),
 
             (r"/Weather/ChangeLog", Controllers.Weather.ChangeLog),
             (r"/Weather/ChangeLogJSON", Controllers.Weather.ChangeLogJSON),
 
             (r"/Weather/JS/(.*)", Controllers.JSControllers.JS),
+
+            (r"/Weather/IP", Controllers.Weather.IP),
 
             # Static
             (r"/Weather/static", tornado.web.StaticFileHandler, dict(path=settings['static_path']))
