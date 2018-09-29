@@ -24,12 +24,9 @@ function onlod() {
             "class": "d-flex justify-content-center"
         }).appendTo("#weather_current");
         {
-            $("<h5/>", {
+            $("<h5> " + rej.current.location.name + " </h5>", {
                 "id": "weather_current-" + "title"
             }).appendTo("#weather_current-head");
-            {
-                $(rej.current.location.name, {}).appendTo("#weather_current-title");
-            }
         }
 
         $("<div/>", {
@@ -40,12 +37,9 @@ function onlod() {
             $("<img src=" + rej.current.current.condition.icon + "/>", {
                 "id": "weather_current-" + "icon"
             }).appendTo("#weather_current-body");
-            $("<div/>", {
+            $("<span> " + rej.current.current.condition.text + " </span>", {
                 "id": "weather_current-" + "state"
             }).appendTo("#weather_current-body");
-            {
-                $(rej.current.current.condition.text, {}).appendTo("#weather_current-state");
-            }
         }
     }
 }
