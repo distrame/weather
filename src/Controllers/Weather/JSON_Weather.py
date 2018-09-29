@@ -19,7 +19,7 @@ class WeatherJSONBy_user_ip(BaseHandler):
         ip = (HTTPHeaders.parse(str(self.request.headers))).get("X-Real-Ip")
 
         res = requests.get(url=get_weather_api_url() + "/current.json",
-                           data={"key": get_weather_api_key,
+                           data={"key": get_weather_api_key(),
                                  "q": ip,
                                  "days": 7,
                                  "lang": "ru"})
