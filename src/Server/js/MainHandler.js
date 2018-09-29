@@ -57,20 +57,20 @@ function onlod() {
             "class": "d-flex justify-content-center"
         }).appendTo("#weather_day_" + i + "");
         {
-            $("<img src=" + rej.forecast.forecastday[i].condition.icon + "/>", {
+            $("<img src=" + rej.forecast.forecastday[i].day.condition.icon + "/>", {
                 "id": "weather_day_" + i + "-" + "icon"
             }).appendTo("#weather_day_" + i + "-body");
             $("<div/>", {
                 "id": "weather_day_" + i + "-" + "info"
             }).appendTo("#weather_day_" + i + "-body");
             {
-                $("<p> " + rej.forecast.forecastday[i].condition.text + " </p>", {
+                $("<p> " + rej.forecast.forecastday[i].day.condition.text + " </p>", {
                     "id": "weather_day_" + i + "-" + "state"
                 }).appendTo("#weather_day_" + i + "-info");
-                $("<p> Максимальная " + rej.forecast.forecastday[i].maxtemp_c + "C </p>", {
+                $("<p> Максимальная " + rej.forecast.forecastday[i].day.maxtemp_c + "C </p>", {
                     "id": "weather_day_" + i + "-" + "temp_max"
                 }).appendTo("#weather_day_" + i + "-info");
-                $("<p> Минимальная " + rej.forecast.forecastday[i].mintemp_c + "C </p>", {
+                $("<p> Минимальная " + rej.forecast.forecastday[i].day.mintemp_c + "C </p>", {
                     "id": "weather_day_" + i + "-" + "temp_min"
                 }).appendTo("#weather_day_" + i + "-info");
             }
