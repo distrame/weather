@@ -24,7 +24,7 @@ function onlod() {
             "class": "d-flex justify-content-center"
         }).appendTo("#weather_current");
         {
-            $("<h4> " + rej.current.location.name + " </h4>", {
+            $("<h4> " + rej.location.name + " </h4>", {
                 "id": "weather_current-" + "title"
             }).appendTo("#weather_current-head");
         }
@@ -34,17 +34,17 @@ function onlod() {
             "class": "d-flex justify-content-center"
         }).appendTo("#weather_current");
         {
-            $("<img src=" + rej.current.current.condition.icon + "/>", {
+            $("<img src=" + rej.current.condition.icon + "/>", {
                 "id": "weather_current-" + "icon"
             }).appendTo("#weather_current-body");
             $("<div/>", {
                 "id": "weather_current-" + "info"
             }).appendTo("#weather_current-body");
             {
-                $("<span> " + rej.current.current.condition.text + " </span>", {
+                $("<p> " + rej.current.condition.text + " </p>", {
                     "id": "weather_current-" + "state"
                 }).appendTo("#weather_current-info");
-                $("<span> " + rej.current.current.temp_c + " по цельсию. </span>", {
+                $("<p> " + rej.current.temp_c + " по цельсию. </p>", {
                     "id": "weather_current-" + "temp"
                 }).appendTo("#weather_current-info");
             }
@@ -64,13 +64,13 @@ function onlod() {
                 "id": "weather_day_" + i + "-" + "info"
             }).appendTo("#weather_day_" + i + "-body");
             {
-                $("<span> " + rej.forecast.forecastday[i].condition.text + " </span>", {
+                $("<p> " + rej.forecast.forecastday[i].condition.text + " </p>", {
                     "id": "weather_day_" + i + "-" + "state"
                 }).appendTo("#weather_day_" + i + "-info");
-                $("<span> Максимальная " + rej.forecast.forecastday[i].maxtemp_c + "C </span>", {
+                $("<p> Максимальная " + rej.forecast.forecastday[i].maxtemp_c + "C </p>", {
                     "id": "weather_day_" + i + "-" + "temp_max"
                 }).appendTo("#weather_day_" + i + "-info");
-                $("<span> Минимальная " + rej.forecast.forecastday[i].mintemp_c + "C </span>", {
+                $("<p> Минимальная " + rej.forecast.forecastday[i].mintemp_c + "C </p>", {
                     "id": "weather_day_" + i + "-" + "temp_min"
                 }).appendTo("#weather_day_" + i + "-info");
             }

@@ -49,6 +49,5 @@ class WeatherJSONBy_user_ip(BaseHandler):
     def post(self):
         ip = (HTTPHeaders.parse(str(self.request.headers))).get("X-Real-Ip")
 
-        self.write({"current": get_current(q=ip, lang="ru"),
-                    "forecast": get_forecast(q=ip, days=7, lang="ru")})
+        self.write(get_forecast(q=ip, days=7, lang="ru"))
         return
