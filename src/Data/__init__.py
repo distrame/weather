@@ -59,3 +59,11 @@ def get_change_log():
         par.append([i.split("$")[0], "$".join(i.split("$")[1:])])
 
     return par
+
+
+def get_weather_api_url():
+    return "https://api.apixu.com/v1"
+
+
+def get_weather_api_key():
+    return "8ce1c85ac34a4491b84135659182909"

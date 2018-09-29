@@ -1,6 +1,6 @@
-from ..BaseControllers import *
-
 from tornado.httputil import HTTPHeaders
+
+from ..BaseControllers import *
 
 
 class IP(BaseHandler):
@@ -9,7 +9,6 @@ class IP(BaseHandler):
     """
 
     def get(self):
-        print(dir(self.request))
         self.write({"request": str(self.request),
                     "arguments": str(self.request.arguments),
                     "body": str(self.request.body),

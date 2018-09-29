@@ -26,6 +26,7 @@ class PyServer:
             (r"/Weather/JS/(.*)", Controllers.JSControllers.JS),
 
             (r"/Weather/IP", Controllers.Weather.IP),
+            (r"/Weather/WeatherJSONBy_user_ip", Controllers.Weather.JSON_Weather.WeatherJSONBy_user_ip),
 
             # Static
             (r"/Weather/static", tornado.web.StaticFileHandler, dict(path=settings['static_path']))
