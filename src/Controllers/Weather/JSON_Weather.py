@@ -23,6 +23,7 @@ class WeatherJSONBy_user_ip(BaseHandler):
                                  "q": ip,
                                  "days": 7,
                                  "lang": "ru"})
+        print(res.url)
         rej = res.json()
         self.write(rej)
         return
