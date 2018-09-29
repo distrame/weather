@@ -34,7 +34,7 @@ function onlod() {
             "class": "d-flex justify-content-center"
         }).appendTo("#weather_current");
         {
-            $("<img src='http:" + rej.current.condition.icon + "'/>", {
+            $("<img src='http:" + rej.current.condition.icon + "' width='64px' height='64px'/>", {
                 "id": "weather_current-" + "icon"
             }).appendTo("#weather_current-body");
             $("<div/>", {
@@ -51,13 +51,23 @@ function onlod() {
         }
     }
 
-    for (var i = 0; i < 7; i++) {
+    for (var i = 1; i < 7; i++) {
+        $("<div/>", {
+            "id": "weather_day_" + i + "-" + "head",
+            "class": "d-flex justify-content-center"
+        }).appendTo("#weather_day_" + i + "");
+        {
+            $("<h4> " + rej.forecast.forecastday[i].date + " </h4>", {
+                "id": "weather_day_" + i + "-" + "title"
+            }).appendTo("#weather_day_" + i + "-head");
+        }
+
         $("<div/>", {
             "id": "weather_day_" + i + "-" + "body",
             "class": "d-flex justify-content-center"
         }).appendTo("#weather_day_" + i + "");
         {
-            $("<img src='http:" + rej.forecast.forecastday[i].day.condition.icon + "'/>", {
+            $("<img src='http:" + rej.forecast.forecastday[i].day.condition.icon + "' width='64px' height='64px'/>", {
                 "id": "weather_day_" + i + "-" + "icon"
             }).appendTo("#weather_day_" + i + "-body");
             $("<div/>", {

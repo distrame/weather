@@ -39,3 +39,10 @@ body {
 .button_about {
     margin: 5px 5px 5px 5px;
 }
+
+.card {
+    border-top: .05rem solid #e5e5e5;
+    border-right: .05rem solid #e5e5e5;
+    border-bottom: .05rem solid #e5e5e5;
+    border-left: .05rem solid #e5e5e5;
+}
