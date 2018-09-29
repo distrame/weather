@@ -6,7 +6,7 @@ from ..BaseControllers import *
 from src.Data import get_weather_api_url, get_weather_api_key
 
 
-def get_curent(q, lang):
+def get_current(q, lang):
     url = get_weather_api_url() + "/current.json" + "?"
     dict_ = {"key": get_weather_api_key(),
              "q": q,
@@ -49,6 +49,6 @@ class WeatherJSONBy_user_ip(BaseHandler):
     def post(self):
         ip = (HTTPHeaders.parse(str(self.request.headers))).get("X-Real-Ip")
 
-        self.write({"curent": get_curent(q=ip, lang="ru"),
+        self.write({"current": get_current(q=ip, lang="ru"),
                     "forecast": get_forecast(q=ip, days=7, lang="ru")})
         return
