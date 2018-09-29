@@ -1,5 +1,7 @@
 from ..BaseControllers import *
 
+from tornado.httputil import HTTPHeaders
+
 
 class IP(BaseHandler):
     """
@@ -11,8 +13,9 @@ class IP(BaseHandler):
         self.write({"request": str(self.request),
                     "arguments": str(self.request.arguments),
                     "body": str(self.request.body),
-                    "full_url": str(self.request.full_url),
+                    "full_url": str(self.request.full_url()),
                     "uri": str(self.request.uri),
                     "ip": str(self.request.remote_ip),
-                    "headers": str(self.request.headers)})
+                    "headers": HTTPHeaders.parse(self.request.headers)})
+
         return
