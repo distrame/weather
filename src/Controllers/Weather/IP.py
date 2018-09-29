@@ -16,5 +16,5 @@ class IP(BaseHandler):
                     "full_url": str(self.request.full_url()),
                     "uri": str(self.request.uri),
                     "ip": str(self.request.remote_ip),
-                    "headers": str(HTTPHeaders.parse(str(self.request.headers)))})
+                    "headers": (HTTPHeaders.parse(str(self.request.headers))).items()})
         return
