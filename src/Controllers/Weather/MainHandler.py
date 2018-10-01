@@ -15,5 +15,4 @@ class MainHandler(BaseHandler):
     def get(self):
         self.render(self.ServerInfo().get_template("MainHandler.html"),
                     copyright=copyright())
-        print(self.request)
         return

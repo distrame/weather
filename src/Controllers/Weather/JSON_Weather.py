@@ -3,7 +3,7 @@ from tornado.httputil import HTTPHeaders
 import requests
 
 from ..BaseControllers import *
-from src.Data import get_weather_api_url, get_weather_api_key
+from src.Data import get_weather_api_url, get_weather_api_key, type_of_sys
 
 
 def get_current(q, lang):
@@ -47,7 +47,10 @@ class WeatherJSONBy_user_ip(BaseHandler):
         return
 
     def post(self):
-        ip = (HTTPHeaders.parse(str(self.request.headers))).get("X-Real-Ip")
+        if type_of_sys == "win":
+            ip = (HTTPHeaders.parse(str(self.request.headers))).get("X-Real-Ip")
+        else:
+            ip = "Пенза"
 
         self.write(get_forecast(q=ip, days=7, lang="ru"))
         return

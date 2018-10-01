@@ -4,10 +4,80 @@ html {
 
 body {
     font-family: 'Open Sans', sans-serif;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
     background-color: #fff;
     overflow-y: scroll;
+
+    background-attachment: fixed;
+}
+
+.back_img_center_top {
+    background-position: center top;
+    background-size: cover;
+}
+
+.back_img_center_center {
+    background-position: center center;
+    background-size: cover;
+}
+
+.vh100 {
+    min-height: 100vh;
+}
+
+.main_mid {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+    max-width: 800px;
+}
+
+.bk_blue {
+    background-color: rgba(1, 22, 39, 0.78);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.foot {
+    color: rgba(255, 255, 255, 0.7);
+
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    /*position: absolute;*/
+    bottom: 0;
+}
+
+.in_foot {
+    margin-top: 20px;
+    padding-top: 5px;
+
+    border-top: .05rem solid #e5e5e5;
+}
+
+.jum {
+    margin: 0 0 0 0;
+    text-align: center;
+    max-width: 1000px;
+    max-height: 425px;
+    background-color: rgba(0, 0, 0, 0);
+    background-position: center center;
+    text-decoration: none;
+}
+
+.jumbotron {
+    font-family: 'Russo One', sans-serif
+}
+
+.a_nounder:hover, :focus {
+    text-decoration: none;
+}
+
+.panel > img {
+    max-width: 320px;
+}
+
+.shadow {
+    word-wrap: break-word;
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 2px 0 2px #000, 0 2px 2px #000, -2px 0 2px #000, 0 -2px 2px #000;
 }
 
 .jum {
@@ -41,8 +111,16 @@ body {
 }
 
 .card {
+    width: 100%;
+
     border-top: .05rem solid #e5e5e5;
     border-right: .05rem solid #e5e5e5;
     border-bottom: .05rem solid #e5e5e5;
     border-left: .05rem solid #e5e5e5;
+}
+
+.main_time{
+    margin-top:5px;
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0.7);
 }

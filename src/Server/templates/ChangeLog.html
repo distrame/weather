@@ -23,53 +23,26 @@
 
 </head>
 
-<body>
+<body class="back_img_center_top" style="background-image: url({{ static_url('images/BackMiku.jpg') }});">
 <!--Head-->
 <div class="container-fluid">
     <div class="row justify-content-center">
-        <div class="col-lg-2"></div>
-        <div class="col-lg-8 main_mid">
+        <div class="col-md-1 col-lg-2 col-xl-2"></div>
+        <div class="col-md-10 col-lg-8 col-xl-8 bk_blue vh100 main_mid">
             <div class="container-fluid" id="head"
                  style="padding-bottom:10px; border-bottom: .05rem solid #e5e5e5;">
-                <nav class="nav nav-pills d-flex justify-content-between">
+                <nav class="nav nav-pills d-flex justify-content-center">
 
                     <div class="navbar-header">
                         <a href="/" class="navbar-brand" style="padding: 0 0 0 0;">
-                            <h3 class="text-muted" style="margin-top:5px; margin-bottom: 0;" id="time">
+                            <h3 class="text-muted main_time" id="time">
 
                             </h3>
                         </a>
                     </div>
-
-                    <div>
-                        <ul class="nav nav-pills">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    Главная
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    По поводу
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    Войти <i class="fa fa-sign-in" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
                 </nav>
             </div>
-        </div>
-        <div class="col-lg-2"></div>
-    </div>
-    <!--Body-->
-    <div class="row justify-content-center">
-        <div class="col-lg-2"></div>
-        <div class="col-lg-8 main_mid">
+            <!--Body-->
             <div class="container-fluid" id="body"
                  style="padding-top: 10px; padding-bottom: 10px;">
                 <div class="row marketing">
@@ -78,21 +51,14 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-lg-2"></div>
-    </div>
-    <!--Foot-->
-    <div class="row justify-content-center">
-        <div class="col-lg-2"></div>
-        <div class="col-lg-8 main_mid">
-            <div class="container-fluid" id="foot"
-                 style="padding-top: 10px; padding-bottom: 10px; color: #777; border-top: .05rem solid #e5e5e5;">
-                <footer class="footer">
-                    <p>{{ copyright }}</p>
+            <!--Foot-->
+            <div id="foot" class="foot container-fluid">
+                <footer class="footer in_foot">
+                    <p style="margin: 0 0 0 0">{{ copyright }}</p>
                 </footer>
             </div>
         </div>
-        <div class="col-lg-2"></div>
+        <div class="col-md-1 col-lg-2 col-xl-2"></div>
     </div>
 </div>
 
