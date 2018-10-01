@@ -47,10 +47,10 @@ class WeatherJSONBy_user_ip(BaseHandler):
         return
 
     def post(self):
-        if type_of_sys == "win":
-            ip = (HTTPHeaders.parse(str(self.request.headers))).get("X-Real-Ip")
-        else:
+        if type_of_sys() == "win":
             ip = "Пенза"
+        else:
+            ip = (HTTPHeaders.parse(str(self.request.headers))).get("X-Real-Ip")
 
         self.write(get_forecast(q=ip, days=7, lang="ru"))
         return
